@@ -2,8 +2,8 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0">
   <info>
     <title>Custom German Citation Style</title>
-    <id>http://www.example.org/styles/custom-german</id>
-    <link href="http://www.example.org/styles/custom-german" rel="documentation"/>
+    <id>https://github.com/YourUsername/YourRepository/raw/main/custom_german_citation.csl</id>
+    <link href="https://github.com/YourUsername/YourRepository/raw/main/custom_german_citation.csl" rel="documentation"/>
     <updated>2025-01-16T12:00:00+00:00</updated>
     <author>
       <name>Your Name</name>
@@ -13,7 +13,7 @@
     <summary>A custom citation style for German bibliography format</summary>
   </info>
 
-  <locale>
+  <locale xml:lang="de">
     <terms>
       <term name="editor" form="verb-short">Hrsg.</term>
       <term name="translator" form="verb-short">Übers.</term>
