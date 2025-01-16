@@ -51,14 +51,14 @@
   </macro>
 
   <macro name="publisher">
-    <group delimiter=": ">
+    <group delimiter=". ">
       <text variable="publisher-place"/>
-      <text variable="publisher"/>
+      <text variable="publisher" prefix=": " />
     </group>
   </macro>
 
   <macro name="page">
-    <text variable="page" prefix="S. "/>
+    <text variable="page" prefix=", S. "/>
   </macro>
 
   <citation>
@@ -69,7 +69,7 @@
         <text macro="title"/>
         <text macro="edition" prefix=" " suffix="."/>
         <text macro="publisher" prefix=" " suffix="."/>
-        <text macro="page" prefix=" " suffix="."/>
+        <text macro="page"/>
       </group>
     </layout>
   </citation>
@@ -82,7 +82,7 @@
         <text macro="title"/>
         <text macro="edition" prefix=" " suffix="."/>
         <text macro="publisher" prefix=" " suffix="."/>
-        <text macro="page" prefix=" " suffix="."/>
+        <text macro="page"/>
       </group>
     </layout>
   </bibliography>
