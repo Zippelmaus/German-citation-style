@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0">
+  <info>
+    <title>Custom German Citation Style</title>
+    <id>http://www.example.org/styles/custom-german</id>
+    <link href="http://www.example.org/styles/custom-german" rel="documentation"/>
+    <updated>2025-01-16T12:00:00+00:00</updated>
+    <author>
+      <name>Your Name</name>
+      <email>your.email@example.com</email>
+    </author>
+    <category field="generic-base"/>
+    <summary>A custom citation style for German bibliography format</summary>
+  </info>
+
+  <locale>
+    <terms>
+      <term name="editor" form="verb-short">Hrsg.</term>
+      <term name="translator" form="verb-short">Übers.</term>
+    </terms>
+  </locale>
+
+  <macro name="author">
+    <names variable="author">
+      <name form="long" and="text" delimiter=", "/>
+    </names>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <macro name="title">
+    <text variable="title" font-style="italic"/>
+  </macro>
+
+  <macro name="edition">
+    <choose>
+      <if is-numeric="edition">
+        <group delimiter=" ">
+          <number variable="edition" form="ordinal"/>
+          <text term="edition" form="short"/>
+        </group>
+      </if>
+      <else>
+        <text variable="edition"/>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="publisher">
+    <group delimiter=": ">
+      <text variable="publisher-place"/>
+      <text variable="publisher"/>
+    </group>
+  </macro>
+
+  <macro name="page">
+    <text variable="page" prefix="S. "/>
+  </macro>
+
+  <citation>
+    <layout delimiter=";">
+      <group delimiter=". ">
+        <text macro="author"/>
+        <text macro="issued"/>
+        <text macro="title"/>
+        <text macro="edition" prefix=" " suffix="."/>
+        <text macro="publisher" prefix=" " suffix="."/>
+        <text macro="page" prefix=" " suffix="."/>
+      </group>
+    </layout>
+  </citation>
+
+  <bibliography>
+    <layout>
+      <group delimiter=". ">
+        <text macro="author"/>
+        <text macro="issued"/>
+        <text macro="title"/>
+        <text macro="edition" prefix=" " suffix="."/>
+        <text macro="publisher" prefix=" " suffix="."/>
+        <text macro="page" prefix=" " suffix="."/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
