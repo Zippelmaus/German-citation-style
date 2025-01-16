@@ -53,12 +53,12 @@
   <macro name="publisher">
     <group delimiter=". ">
       <text variable="publisher-place"/>
-      <text variable="publisher" prefix=": " />
+      <text variable="publisher" prefix=": " suffix="," />
     </group>
   </macro>
 
   <macro name="page">
-    <text variable="page" prefix=", S. "/>
+    <text variable="page" prefix=" S. "/>
   </macro>
 
   <citation>
