@@ -61,16 +61,32 @@
     <text variable="page" prefix=" S. "/>
   </macro>
 
-  <citation>
+  <macro name="short-form">
+    <group delimiter=", ">
+      <text macro="author"/>
+      <text macro="issued"/>
+      <text macro="title" form="short"/>
+    </group>
+  </macro>
+
+  <citation et-al-min="4" et-al-use-first="1" subsequent-author-substitute="ibid">
     <layout delimiter=";">
-      <group delimiter=". ">
-        <text macro="author"/>
-        <text macro="issued"/>
-        <text macro="title"/>
-        <text macro="edition" prefix=" " suffix="."/>
-        <text macro="publisher" prefix=" " suffix="."/>
-        <text macro="page"/>
-      </group>
+      <choose>
+        <if position="subsequent">
+          <text macro="short-form"/>
+          <text macro="page"/>
+        </if>
+        <else>
+          <group delimiter=". ">
+            <text macro="author"/>
+            <text macro="issued"/>
+            <text macro="title"/>
+            <text macro="edition" prefix=" " suffix="."/>
+            <text macro="publisher" prefix=" " suffix="."/>
+            <text macro="page"/>
+          </group>
+        </else>
+      </choose>
     </layout>
   </citation>
 
